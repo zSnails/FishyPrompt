@@ -30,7 +30,7 @@ oh-my-posh init <your shell> --config '/path/to/fishy.omp.json'
 
 ## Credits
 
-FishyPrompt pays homage to the shel prompt used by [Jon
+FishyPrompt pays homage to the shell prompt used by [Jon
 Gjengset](https://github.com/jonhoo). Special thanks to them for the inspiration.
 
 ## License
