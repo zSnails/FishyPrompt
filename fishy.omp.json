@@ -1,52 +1,61 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "version": 2,
-    "final_space": true,
-    "blocks": [
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
         {
-            "type": "prompt",
-            "alignment": "left",
-            "segments": [
-                {
-                    "type": "time",
-                    "style": "plain",
-                    "foreground": "darkGray",
-                    "properties": {
-                        "time_format": "15:04"
-                    },
-                    "template": "[{{.CurrentDate | date .Format}}] "
-                },
-                {
-                    "type": "session",
-                    "style": "plain",
-                    "foreground": "blue",
-                    "template": "{{ .UserName }}"
-                },
-                {
-                    "type": "path",
-                    "properties": {
-                        "style": "folder"
-                    },
-                    "foreground": "yellow",
-                    "template": "{{ if ne .PWD \"~\" }}<darkGray>:</>{{ .Path }}{{ end }}"
-                },
-                {
-                    "type": "git",
-                    "style": "plain",
-                    "foreground": "green",
-                    "properties": {
-                        "branch_icon": "",
-                        "fetch_status": true
-                    },
-                    "template": " ({{ .HEAD }}{{ if gt (.Working.String | len) 0 }} {{ .Working }}{{ end }}{{ if gt (.Staging.String | len) 0}} {{ .Staging}}{{ end }})"
-                },
-                {
-                    "type": "text",
-                    "style": "plain",
-                    "foreground": "red",
-                    "template": " |"
-                }
-            ]
+          "properties": {
+            "cache_duration": "none",
+            "time_format": "15:04"
+          },
+          "template": "[{{.CurrentDate | date .Format}}] ",
+          "foreground": "darkGray",
+          "type": "time",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ .UserName }}",
+          "foreground": "blue",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "folder"
+          },
+          "template": "{{ if ne .PWD \"~\" }}<darkGray>:</>{{ .Path }}{{ end }}",
+          "foreground": "yellow",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "cache_duration": "none",
+            "fetch_status": true
+          },
+          "template": " ({{ .HEAD }}{{ if gt (.Working.String | len) 0 }} {{ .Working }}{{ end }}{{ if gt (.Staging.String | len) 0}} {{ .Staging}}{{ end }})",
+          "foreground": "green",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " |",
+          "foreground": "red",
+          "type": "text",
+          "style": "plain"
         }
-    ]
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
 }
