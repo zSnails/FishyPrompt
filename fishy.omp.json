@@ -31,7 +31,8 @@
           },
           "template": "{{ if ne .PWD \"~\" }}<darkGray>:</>{{ .Path }}{{ end }}",
           "foreground": "yellow",
-          "type": "path"
+          "type": "path",
+          "style": "plain"
         },
         {
           "properties": {
