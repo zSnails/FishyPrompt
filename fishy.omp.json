@@ -1,5 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "transient_prompt": {
+      "template": "󰐣 ",
+      "background": "transparent",
+      "foreground": "darkGray",
+      "newline": false
+  },
+  "secondary_prompt": {
+      "background": "transparent",
+      "foreground": "darkGray",
+      "template": "󰐣 "
+  },
   "blocks": [
     {
       "type": "prompt",
