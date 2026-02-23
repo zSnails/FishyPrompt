@@ -18,8 +18,18 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none",
+          "type": "python",
+          "style": "plain",
+          "display_mode": "environment",
+          "template": "{{if .Venv}}({{.Venv}}) {{end}}",
+          "foreground": "yellow",
+          "options": {
+            "fetch_version": false,
+            "fetch_virtual_env": true
+          }
+        },
+        {
+          "options": {
             "time_format": "15:04"
           },
           "template": "[{{.CurrentDate | date .Format}}] ",
