@@ -28,17 +28,13 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": "{{ .UserName }}",
           "foreground": "blue",
           "type": "session",
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
+          "options": {
             "style": "folder"
           },
           "template": "{{ if ne .PWD \"~\" }}<darkGray>:</>{{ .Path }}{{ end }}",
@@ -47,9 +43,8 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "branch_icon": "",
-            "cache_duration": "none",
             "fetch_status": true
           },
           "template": " ({{ .HEAD }}{{ if gt (.Working.String | len) 0 }} {{ .Working }}{{ end }}{{ if gt (.Staging.String | len) 0}} {{ .Staging}}{{ end }})",
@@ -58,9 +53,6 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": " |",
           "foreground": "red",
           "type": "text",
@@ -69,6 +61,6 @@
       ]
     }
   ],
-  "version": 3,
+  "version": 4,
   "final_space": true
 }
