@@ -9,7 +9,8 @@
   "secondary_prompt": {
       "background": "transparent",
       "foreground": "darkGray",
-      "template": "󰐣 "
+      "template": "󰐣 ",
+      "template-discarded": " "
   },
   "blocks": [
     {
