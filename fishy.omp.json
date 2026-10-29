@@ -54,10 +54,9 @@
         },
         {
           "options": {
-            "branch_icon": "",
-            "fetch_status": true
+            "branch_icon": ""
           },
-          "template": " ({{ .HEAD }}{{ if gt (.Working.String | len) 0 }} {{ .Working }}{{ end }}{{ if gt (.Staging.String | len) 0}} {{ .Staging}}{{ end }})",
+          "template": " ({{ .HEAD }}{{ if gt (.Working.String | len) 0 }} {{ .Working.String }}{{end}})",
           "foreground": "green",
           "type": "git",
           "style": "plain"
